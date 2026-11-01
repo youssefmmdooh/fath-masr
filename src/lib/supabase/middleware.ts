@@ -46,10 +46,9 @@ export async function updateSession(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
-  // Protected paths that require authentication
+  // Protected paths that require authentication (Note: Leaderboard is PUBLIC!)
   const isProtectedPath =
     pathname.startsWith("/play") ||
-    pathname.startsWith("/leaderboard") ||
     pathname.startsWith("/profile") ||
     pathname.startsWith("/teacher");
 

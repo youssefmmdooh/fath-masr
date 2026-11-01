@@ -88,10 +88,10 @@ ALTER TABLE public.student_progress ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.question_analytics ENABLE ROW LEVEL SECURITY;
 
 -- 1) سياسات جدول profiles
--- السماح لجميع المستخدمين المسجلين بقراءة بيانات الصدارة والملفات
-CREATE POLICY "Profiles are viewable by authenticated users"
+-- السماح لجميع الزوار والمستخدمين بقراءة بيانات الصدارة والملفات
+CREATE POLICY "Profiles are viewable by public"
 ON public.profiles FOR SELECT
-TO authenticated
+TO public
 USING (true);
 
 -- السماح للمستخدم بتعديل بيانات ملفه الشخصي فقط

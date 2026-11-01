@@ -37,7 +37,7 @@ function LoginForm() {
     if (res.error) {
       setServerError(res.error);
     } else {
-      router.push(redirectPath);
+      window.location.href = redirectPath;
     }
   };
 

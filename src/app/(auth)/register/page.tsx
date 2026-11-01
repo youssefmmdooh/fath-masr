@@ -48,9 +48,9 @@ export default function RegisterPage() {
       setServerError(res.error);
     } else {
       if (data.role === "teacher") {
-        router.push("/teacher");
+        window.location.href = "/teacher";
       } else {
-        router.push("/play");
+        window.location.href = "/play";
       }
     }
   };
